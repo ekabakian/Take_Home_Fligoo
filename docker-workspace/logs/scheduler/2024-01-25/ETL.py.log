@@ -1,0 +1,58 @@
+[2024-01-25T13:49:20.843+0000] {processor.py:161} INFO - Started process (PID=41) to work on /opt/airflow/dags/ETL.py
+[2024-01-25T13:49:20.845+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2024-01-25T13:49:20.849+0000] {logging_mixin.py:188} INFO - [2024-01-25T13:49:20.848+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2024-01-25T13:49:20.901+0000] {logging_mixin.py:188} INFO - [2024-01-25T13:49:20.901+0000] {base.py:83} INFO - Using connection ID 'mysql_db' for task execution.
+[2024-01-25T13:49:20.924+0000] {logging_mixin.py:188} INFO - [2024-01-25T13:49:20.918+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 10, in <module>
+    conn = mysql.get_conn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/mysql/hooks/mysql.py", line 195, in get_conn
+    return MySQLdb.connect(**conn_config)
+  File "/home/airflow/.local/lib/python3.8/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2002, "Can't connect to server on '192.168.16.4' (115)")
+[2024-01-25T13:49:20.925+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2024-01-25T13:49:20.944+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ETL.py took 0.106 seconds
+[2024-01-25T13:49:51.117+0000] {processor.py:161} INFO - Started process (PID=58) to work on /opt/airflow/dags/ETL.py
+[2024-01-25T13:49:51.118+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2024-01-25T13:49:51.120+0000] {logging_mixin.py:188} INFO - [2024-01-25T13:49:51.120+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2024-01-25T13:49:51.148+0000] {logging_mixin.py:188} INFO - [2024-01-25T13:49:51.148+0000] {base.py:83} INFO - Using connection ID 'mysql_db' for task execution.
+[2024-01-25T13:49:51.160+0000] {logging_mixin.py:188} INFO - [2024-01-25T13:49:51.155+0000] {dagbag.py:348} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 344, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 10, in <module>
+    conn = mysql.get_conn()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/providers/mysql/hooks/mysql.py", line 195, in get_conn
+    return MySQLdb.connect(**conn_config)
+  File "/home/airflow/.local/lib/python3.8/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/MySQLdb/connections.py", line 193, in __init__
+    super().__init__(*args, **kwargs2)
+MySQLdb.OperationalError: (2002, "Can't connect to server on '192.168.16.4' (115)")
+[2024-01-25T13:49:51.161+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2024-01-25T13:49:51.172+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ETL.py took 0.058 seconds
+[2024-01-25T13:50:21.367+0000] {processor.py:161} INFO - Started process (PID=75) to work on /opt/airflow/dags/ETL.py
+[2024-01-25T13:50:21.368+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2024-01-25T13:50:21.370+0000] {logging_mixin.py:188} INFO - [2024-01-25T13:50:21.369+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2024-01-25T13:50:21.401+0000] {logging_mixin.py:188} INFO - [2024-01-25T13:50:21.401+0000] {base.py:83} INFO - Using connection ID 'mysql_db' for task execution.
+[2024-01-25T13:50:21.428+0000] {processor.py:840} INFO - DAG(s) 'taskflow_api_etl' retrieved from /opt/airflow/dags/ETL.py
+[2024-01-25T13:50:21.560+0000] {logging_mixin.py:188} INFO - [2024-01-25T13:50:21.560+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2024-01-25T13:50:21.588+0000] {logging_mixin.py:188} INFO - [2024-01-25T13:50:21.587+0000] {dag.py:3823} INFO - Setting next_dagrun for taskflow_api_etl to 2024-01-25 00:00:00+00:00, run_after=2024-01-26 00:00:00+00:00
+[2024-01-25T13:50:21.622+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ETL.py took 0.259 seconds
+[2024-01-25T13:50:46.632+0000] {processor.py:161} INFO - Started process (PID=92) to work on /opt/airflow/dags/ETL.py
+[2024-01-25T13:50:46.634+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2024-01-25T13:50:46.635+0000] {logging_mixin.py:188} INFO - [2024-01-25T13:50:46.634+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2024-01-25T13:50:46.673+0000] {logging_mixin.py:188} INFO - [2024-01-25T13:50:46.673+0000] {base.py:83} INFO - Using connection ID 'mysql_db' for task execution.
+[2024-01-25T13:50:46.691+0000] {processor.py:840} INFO - DAG(s) 'taskflow_api_etl' retrieved from /opt/airflow/dags/ETL.py
+[2024-01-25T13:50:46.698+0000] {logging_mixin.py:188} INFO - [2024-01-25T13:50:46.697+0000] {dag.py:3036} INFO - Sync 1 DAGs
+[2024-01-25T13:50:46.728+0000] {logging_mixin.py:188} INFO - [2024-01-25T13:50:46.728+0000] {dag.py:3823} INFO - Setting next_dagrun for taskflow_api_etl to 2024-01-25 00:00:00+00:00, run_after=2024-01-26 00:00:00+00:00
+[2024-01-25T13:50:46.759+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/ETL.py took 0.130 seconds
